@@ -1,0 +1,23 @@
+/* .food-section
+{
+    width: 1000px;
+    height: 1000px;
+    margin: 10px;
+   
+} */
+
+
+.food-item
+{
+    
+    margin: 0px;
+    display: inline;
+   
+}
+
+.food-item>img
+{
+    width: 500px;
+    height: 500px;
+    object-fit: fill;
+}

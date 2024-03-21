@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <button> Start </button>
+    <div class="food-section"> </div>
+
+
+    <script>
+
+        let btn = document.querySelector("button")
+        let out = document.querySelector(".food-section")
+
+        let arr = [
+                {
+                    name: "Parota",
+                    link: "https://static.toiimg.com/thumb/msid-76344801,width-400,resizemode-4/76344801.jpg"
+                },
+                {
+                    name: "Poori",
+                    link: "https://traditionallymodernfood.com/wp-content/uploads/2021/09/poori-recipe-41-500x500.jpeg"
+                },
+                {
+                    name: "Paani Puri",
+                    link: "https://cdn1.foodviva.com/static-content/food-images/snacks-recipes/pani-puri/pani-puri.jpg"
+                },
+                {
+                    name: "Dosa",
+                    link: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpJivCCXW_14iTjVaacn0ZXVVKG7EMv1Oteg&s"
+                }
+            ]
+
+
+        let newDiv = document.createElement('div');
+        newDiv.className = 'food-item';
+
+
+        btn.addEventListener("click", ()=>addFoods(arr))
+            
+       
+        
+        // code to create one div dynammically: -->
+        function addFoods(Foodarray) 
+        {
+            btn.disabled = true
+            
+            for (let t of Foodarray) 
+            {
+                let img = document.createElement('img')
+                img.src = t.link
+                let h1 = document.createElement('h1')
+                h1 = t.name
+                newDiv.append(img)
+                newDiv.append(h1)
+                out.append(newDiv)
+            }
+
+        }
+
+
+    </script>
+</body>
+
+</html>
